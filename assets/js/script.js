@@ -54,11 +54,23 @@ Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella mile
 
 /* Define the slides list */
 const slides = [
-    './assets/img/01.webp',
-    './assets/img/02.webp', 
-    './assets/img/03.webp', 
-    './assets/img/04.webp',
-    './assets/img/05.webp',
+    
+    {
+        'foto' : './assets/img/01.webp',
+    },
+    {
+        'foto' : './assets/img/02.webp', 
+    },
+    {
+        'foto' : './assets/img/03.webp', 
+    },
+    {
+        'foto' : './assets/img/04.webp',
+    },
+    {
+        'foto' :  './assets/img/05.webp',
+    }
+    
   ]
   
   let activeSlide = 0;
@@ -78,7 +90,7 @@ const slides = [
     console.log(slidePath);
     
     // for each slide we create the markup
-    const slideMarkup = `<img class="${activeSlide === i ? 'active' : '' }" src="${slidePath}" alt="">`
+    const slideMarkup = `<img class="${activeSlide === i ? 'active' : '' }" src="${slidePath.foto}" alt="">`
     //console.log(slideMarkup);
   
     sliderImagesEl.insertAdjacentHTML('beforeend', slideMarkup)
@@ -133,7 +145,7 @@ const slides = [
   
   for (let i = 0; i < slides.length; i++) {
     const thumbPath = slides[i];
-    const thumbMarkup = `<img class="thumb ${activeSlide === i ? 'active' : ''}" src="${thumbPath}" alt="">`
+    const thumbMarkup = `<img class="thumb ${activeSlide === i ? 'active' : ''}" src="${thumbPath.foto}" alt="">`
     //console.log(thumbMarkup);
   
     thumbsElement.insertAdjacentHTML('beforeend', thumbMarkup)
