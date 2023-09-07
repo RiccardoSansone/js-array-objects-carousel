@@ -54,9 +54,9 @@ Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella mile
 
 /* Define the slides list */
 const slides = [
-    './assets/img/01.webp', //0
-    './assets/img/02.webp', //1
-    './assets/img/03.webp', //etc
+    './assets/img/01.webp',
+    './assets/img/02.webp', 
+    './assets/img/03.webp', 
     './assets/img/04.webp',
     './assets/img/05.webp',
   ]
